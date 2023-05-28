@@ -1,7 +1,5 @@
 package src.main.java.com.example.anagram;
 
-import org.junit.jupiter.api.function.Executable;
-
 public class AnagramCreater {
     public String createAnagram(String anagram){
         validate(anagram);
@@ -36,9 +34,8 @@ public class AnagramCreater {
     }
 
     private void validate(String string) throws RuntimeException{
-        if (string.isEmpty()){
-            throw new RuntimeException("передана пустая строка");
-        } else if (string.trim().length() == 0) {
+        string.isEmpty();
+        if (string.trim().length() == 0) {
             throw new RuntimeException("строка состоит из пробелов");
         }
     }
